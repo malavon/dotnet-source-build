@@ -7,7 +7,7 @@
   </PropertyGroup>
     <!-- Humanizer expects us to tell the version it's building -->
   <PropertyGroup>
-    <HumanizerCorePackageVersion>2.2.0</HumanizerCorePackageVersion>
+    <HumanizerCorePackageVersion>2.14.1</HumanizerCorePackageVersion>
   </PropertyGroup>
   <!-- Production Dependencies -->
   <PropertyGroup>

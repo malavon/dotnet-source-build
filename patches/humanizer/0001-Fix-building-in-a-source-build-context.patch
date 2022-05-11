@@ -16,45 +16,27 @@ really need it for now.
  src/NuGet.config               | 5 ++++-
  2 files changed, 6 insertions(+), 4 deletions(-)
 
+diff --git a/NuGet.config b/NuGet.config
+new file mode 100644
+index 0000000..43bd4ce
+--- /dev/null
++++ b/NuGet.config
+@@ -0,0 +1,6 @@
++<?xml version="1.0" encoding="utf-8"?>
++<configuration>
++   <packageSources>    
++     <add key="nuget.org" value="https://api.nuget.org/v3/index.json" />
++   </packageSources>
++</configuration>
 diff --git a/src/Humanizer/Humanizer.csproj b/src/Humanizer/Humanizer.csproj
-index 842a373..e018285 100644
+index 5b2f8ad..51adb3c 100644
 --- a/src/Humanizer/Humanizer.csproj
 +++ b/src/Humanizer/Humanizer.csproj
 @@ -3,6 +3,7 @@
-     <TargetFramework>netstandard1.0</TargetFramework>    
-     <Authors>Mehdi Khalili, Oren Novotny</Authors>
+     <TargetFrameworks>netstandard1.0;netstandard2.0;net6.0</TargetFrameworks>    
+     <Authors>Mehdi Khalili, Claire Novotny</Authors>
      <PackageLicenseUrl>https://raw.githubusercontent.com/Humanizr/Humanizer/master/LICENSE</PackageLicenseUrl>
-+    <PackageVersion>2.2.0</PackageVersion>
++    <PackageVersion>2.14.1</PackageVersion>
      <PackageProjectUrl>https://github.com/Humanizr/Humanizer</PackageProjectUrl>
      <MinClientVersion>2.12</MinClientVersion>
      <Description>A micro-framework that turns your normal strings, type names, enum fields, date fields ETC into a human friendly format</Description>    
-@@ -16,7 +17,5 @@
-   </PropertyGroup>
-   
-   <ItemGroup>
--    <PackageReference Include="GitVersionTask" Version="4.0.0-beta0011" PrivateAssets="All" />
--    <PackageReference Include="SourceLink.Create.CommandLine" Version="2.1.1" PrivateAssets="All" />
-   </ItemGroup>
--</Project>
-\ No newline at end of file
-+</Project>
-diff --git a/src/NuGet.config b/src/NuGet.config
-index be02089..2fb8ff3 100644
---- a/src/NuGet.config
-+++ b/src/NuGet.config
-@@ -1,7 +1,10 @@
- <?xml version="1.0" encoding="utf-8"?>
- <configuration>
-   <packageSources>    
-+    <!--
-+    This feed gives an error: Feed does not exist.
-     <add key="CI Builds (Humanizer)" value="https://www.myget.org/F/humanizer/api/v3/index.json" />    
-+    -->
-     <add key="nuget.org" value="https://api.nuget.org/v3/index.json" />
-   </packageSources>
--</configuration>
-\ No newline at end of file
-+</configuration>
--- 
-2.26.2
-
