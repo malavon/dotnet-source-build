@@ -1,0 +1,17 @@
+ .../Portable/Lowering/AsyncRewriter/AsyncExceptionHandlerRewriter.cs   | 3 ++-
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+
+diff --git a/src/Compilers/CSharp/Portable/Lowering/AsyncRewriter/AsyncExceptionHandlerRewriter.cs b/src/Compilers/CSharp/Portable/Lowering/AsyncRewriter/AsyncExceptionHandlerRewriter.cs
+index 4ce4610e7d3..f45cda25955 100644
+--- a/src/Compilers/CSharp/Portable/Lowering/AsyncRewriter/AsyncExceptionHandlerRewriter.cs
++++ b/src/Compilers/CSharp/Portable/Lowering/AsyncRewriter/AsyncExceptionHandlerRewriter.cs
+@@ -141,7 +141,8 @@ public override BoundNode VisitTryStatement(BoundTryStatement node)
+                 tryStatementSyntax.IsKind(SyntaxKind.UsingStatement) ||
+                 tryStatementSyntax.IsKind(SyntaxKind.ForEachStatement) ||
+                 tryStatementSyntax.IsKind(SyntaxKind.ForEachVariableStatement) ||
+-                tryStatementSyntax.IsKind(SyntaxKind.LocalDeclarationStatement));
++                tryStatementSyntax.IsKind(SyntaxKind.LocalDeclarationStatement) ||
++                tryStatementSyntax.IsKind(SyntaxKind.LockStatement));
+ 
+             BoundStatement finalizedRegion;
+             BoundBlock rewrittenFinally;
