@@ -150,9 +150,9 @@
       <Uri>https://github.com/aspnet/common</Uri>
       <Sha>6e37cdfe96ac8b06a923242120169fafacd720e6</Sha>
     </Dependency>
-    <Dependency Name="Humanizer.Core" Version="2.2.0">
+    <Dependency Name="Humanizer.Core" Version="2.14.1">
       <Uri>https://github.com/Humanizr/Humanizer</Uri>
-      <Sha>b30550eed103a6970d8465fe7c5c16300b70be81</Sha>
+      <Sha>3ebc38de585fc641a04b0e78ed69468453b0f8a1</Sha>
       <RepoName>humanizer</RepoName>
     </Dependency>
   </ProductDependencies>
