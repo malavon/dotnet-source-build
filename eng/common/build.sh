@@ -191,6 +191,7 @@ function Build {
     /p:PerformanceTest=$performance_test \
     /p:Sign=$sign \
     /p:Publish=$publish \
+    /p:Rid=freebsd-x64 \
     $properties
 
   ExitWithExitCode 0
